@@ -1,0 +1,62 @@
+﻿@using Projeto_CMS_BackOffice.Controllers;
+@using Microsoft.AspNetCore.Http;
+@using System.Net.Http;
+@using System.Net.Http.Headers;
+
+@if (UtilizadoresController.Autenticado(Context))
+{
+
+<div id="menu" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    @if (Context.Session.GetString("Role") == "Cliente")
+    {
+        var authToken = Context.Session.GetString("Token");
+        HttpClient _client = new HttpClient();
+        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
+        @*<img src="http://127.0.0.1:2626/api/cliente/ImageGetUser/@Context.Session.GetString("Foto")" height="70" style="border-radius: 50%; margin-left: auto; margin-right: auto; display: block;" />*@
+        <img src="http://127.0.0.1:2626/api/cliente/ImageGetUser/@Context.Session.GetString("Foto")" height="70" style="border-radius: 50%; margin-left: auto; margin-right: auto; display: block;" />
+    }
+    else if (Context.Session.GetString("Role") == "Admin")
+    {
+        var authToken = Context.Session.GetString("Token");
+        HttpClient _client = new HttpClient();
+        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
+        <img src="http://127.0.0.1:2626/api/administrador/ImageGetDefault/admin.jpg" height="70" style="border-radius: 50%; margin-left: auto; margin-right: auto; display: block;" />
+    }
+
+
+    @if (Context.Session.GetString("Role") == "Cliente")
+    {
+        <a asp-action="PerfilCliente" asp-controller="Cliente" asp-route-userId="@Context.Session.GetString("Id")">Perfil</a>
+        <a asp-action="CriarLayoutNumero1" asp-controller="Cliente">Criar Layout</a>
+        <a asp-action="SeusLayouts" asp-controller="Cliente">Seus Layouts</a>
+    }
+    else if (Context.Session.GetString("Role") == "Admin")
+    {
+        <a asp-action="PerfilAdmin" asp-controller="Administrador" asp-route-userId="@Context.Session.GetString("Id")">Perfil</a>
+        <a asp-action="GerirClientes" asp-controller="Administrador">Gerir Clientes</a>
+        <a asp-action="RegistAdmin" asp-controller="Utilizadores">Adicionar Admin</a>
+    }
+</div>
+
+    <span id="botaoAbrir" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+}
+
+<script>
+    function openNav() {
+        document.getElementById("menu").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("menu").style.width = "0";
+    }
+
+    document.onclick = function (e) {
+    
+        if (e.target.id !== "menu" && e.target.id !== "botaoAbrir") {
+            closeNav();
+            }
+    }
+
+    
+</script>

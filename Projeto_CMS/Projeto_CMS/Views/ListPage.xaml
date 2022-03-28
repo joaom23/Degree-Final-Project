@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto_CMS.Views.ListPage"
+             Title="Exemplo Layout em Lista">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <AbsoluteLayout Grid.Row="0">
+                <Image HorizontalOptions="Center" Aspect="Fill" HeightRequest="150" WidthRequest="420" Opacity="0.8" Source="{Binding Banner}"></Image>
+                <StackLayout>
+
+                    <Label Text="{Binding Titulo}" TextColor="{Binding CorTitulo}" HorizontalOptions="Center" FontSize="40" Padding="50"></Label>
+                    <Label Text="{Binding Descricao}" TextColor="{Binding CorDescricao}" HorizontalOptions="Center" FontSize="20"></Label>
+                    <Label Text="{Binding Morada}" TextColor="{Binding CorMorada}" HorizontalOptions="Center"></Label>
+                    <Label Text="{Binding Horario}" TextColor="{Binding CorHorario}" HorizontalOptions="Center"></Label>
+                </StackLayout>
+            </AbsoluteLayout>
+            <CollectionView Grid.Row="1" x:Name="col1" ItemsSource="{Binding ListaProdutos}" ItemsLayout="VerticalList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"></RowDefinition>
+                                <RowDefinition Height="80"></RowDefinition>
+                                <RowDefinition Height="80"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Imagem}" Aspect="AspectFill" Grid.RowSpan="2" Grid.ColumnSpan="2" HeightRequest="150" Grid.Column="0"></Image>
+                            <Label BackgroundColor="White" TextColor="{Binding CorTextoProdutos}" Text="{Binding DescricaoProduto}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" ></Label>
+                            <Label BackgroundColor="black" TextColor="White"  Text="{Binding Preco}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

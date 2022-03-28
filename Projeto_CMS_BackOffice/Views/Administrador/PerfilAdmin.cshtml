@@ -1,0 +1,117 @@
+﻿@model Projeto_CMS_BackOffice.Administrador
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = "PerfilCliente";
+}
+
+<h1>Perfil Admin</h1>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-@ViewBag.Type alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        @ViewBag.Message
+    </div>
+}
+
+<div class="perfil-foto">
+    <img src="http://127.0.0.1:2626/api/administrador/ImageGetDefault/admin.jpg" />
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Seu Id
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Nome
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.IdANavegation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.IdANavegation.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Nome)
+            </td>
+            <td>
+                <a onclick="openForm()" class="open-form">Alterar Palavra-Passe</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="form-popup" id="emailForm" style="display: none;">
+    <form asp-action="SubmeterAlterarPalavraPasse" asp-controller="Cliente" class="form-popup-content">
+
+        <label><b>Alterar Palavra Pass</b></label><br />
+
+        <label>Por favor insira a palavra passe antiga</label><br />
+        <input id="password1" type="password" placeholder="Palavra passe antiga" name="passAntiga" required style="width: 40%;">
+        <i class="bi bi-eye-slash" id="1" style="position:relative; margin-left: 80%; top:-30px; cursor:pointer;" onclick="showPassword(this.id)"></i><br />
+
+        <label>Nova palavra passe</label><br />
+        <input id="password2" type="password" placeholder="Nova palavra passe" name="passNova" required style="width: 40%;">
+        <i class="bi bi-eye-slash" id="2" style="position:relative; margin-left: 80%; top:-30px; cursor:pointer;" onclick="showPassword(this.id)"></i><br />
+
+        <label>Confirmar nova palavra passe</label><br />
+        <input id="password3" type="password" placeholder="Confirmar nova palavra passe" name="passNovaConfirmar" required style="width: 40%;">
+        <i class="bi bi-eye-slash" id="3" style="position:relative; margin-left: 80%; top:-30px; cursor:pointer;" onclick="showPassword(this.id)"></i><br />
+
+        <span class="close-form" onclick="closeForm()">&times;</span><br />
+        <input type="submit" value="Ok" class="btn btn-success" style="width: 30%;" />
+    </form>
+</div>
+
+
+@section Scripts {
+    <script>
+        function openForm() {
+            document.getElementById("emailForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("emailForm").style.display = "none";
+        }
+
+
+        function showPassword() {
+            var button = document.getElementById("togglePassword");
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+                button.classList.add("bi-eye");
+            } else {
+                x.type = "password";
+                button.classList.remove("bi-eye");
+            }
+        }
+
+        function showPassword(id) {
+            var button = document.getElementById(id);
+            var x = document.getElementById("password" + id);
+            if (x.type === "password") {
+                x.type = "text";
+                button.classList.add("bi-eye");
+            } else {
+                x.type = "password";
+                button.classList.remove("bi-eye");
+            }
+        }
+
+    </script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

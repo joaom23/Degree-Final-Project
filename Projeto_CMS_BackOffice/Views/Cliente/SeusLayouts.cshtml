@@ -1,0 +1,47 @@
+﻿@model ReturnLayoutsViewModel
+
+@{
+    ViewData["Title"] = "Seus Layouts";
+}
+
+<h1>Seus Layouts</h1>
+
+@if (Model.LayoutNumero1s.Count() > 0)
+{
+<table class="table table-borderless">
+    <tbody>
+        @foreach (var item in Model.LayoutNumero1s)
+        {
+            <tr>
+                @*<td>
+                    <a style="text-decoration:none; color:black" asp-action="VerMaisInfo" asp-controller="Home" asp-route-id="@item.IdR"> @Html.DisplayFor(modelItem => item.Nome)</a>
+                </td>*@
+                <td>
+                    <div style="position:relative; padding:10px;">
+                        <div style="position:absolute">
+                            <a style="text-decoration:none; color:black; position:relative; font-size:20px; " asp-action="VerMaisInfo" asp-controller="Home" asp-route-id="@item.Id"> @Html.DisplayFor(modelItem => item.Titulo)</a>
+                        </div>
+                        <div>
+                            <a style="position:relative; top:30px;" asp-action="EditarLayoutNumero1" asp-controller="Cliente" asp-route-LayoutId="@item.Id"><img style="border-radius:10%; box-shadow:2px 2px 4px grey;" src="http://127.0.0.1:2626/api/cliente/ImageGetDefault/Shop.jpg" height="70" /></a>
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+            }
+            else
+            {
+                <p>Ainda não possui nenhum layout, clique <a asp-action="CriarLayoutNumero1" asp-controller="Cliente">aqui</a> para criar o seu primeiro layout! </p>
+            }
+<br />
+<br />
+<div>
+    <a class="btn btn-outline-info" asp-action="Index" asp-controller="Home">Voltar</a>
+</div>

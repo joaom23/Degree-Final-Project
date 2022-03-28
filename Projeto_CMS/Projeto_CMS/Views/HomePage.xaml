@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto_CMS.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label x:Name="tituloLabel" Text="" FontSize="50"/>
+                <StackLayout HorizontalOptions="Center">
+                <Image x:Name="fotoN1" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="50" Margin="0,0,0,50"/>
+                <Image x:Name="fotoN2" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="50" Margin="0,0,0,50"/>
+                <Image x:Name="fotoN3" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="50" Margin="0,0,0,50"/>
+                <Image x:Name="fotoN4" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="50" Margin="0,0,0,50"/>
+            </StackLayout>
+            <Button x:Name="botaoButton" Text=""/>
+            <Button Clicked="Logout" Text="Logout"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

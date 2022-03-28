@@ -1,0 +1,91 @@
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.deps.json
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\ref\Projeto_CMS.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.pdb
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Editar.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Menu.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Primeira.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Produtos.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\View.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.AssemblyInfoInputs.cache
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.AssemblyInfo.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.csproj.CoreCompileInputs.cache
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.csproj.CopyComplete
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\ref\Projeto_CMS.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.pdb
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.csproj.AssemblyReference.cache
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Layout1Page.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Layout2Page.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\LayoutsPredefinidosPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Drinks.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\View2.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\SeusLayoutsPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\CarrosselPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\ListPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.csproj.AssemblyReference.cache
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\CarrosselPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Layout1Page.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Layout2Page.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\LayoutsPredefinidosPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\ListPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Menu.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Primeira.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\SeusLayoutsPage.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\View.xaml.g.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.AssemblyInfoInputs.cache
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.AssemblyInfo.cs
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.csproj.CoreCompileInputs.cache
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\ref\Projeto_CMS.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.pdb
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.deps.json
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\ref\Projeto_CMS.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.pdb
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\jmfer\OneDrive\Ambiente de Trabalho\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.csproj.CopyComplete
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.deps.json
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.dll
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\ref\Projeto_CMS.dll
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\bin\Debug\netstandard2.0\Projeto_CMS.pdb
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\CarrosselPage.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Layout1Page.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Layout2Page.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\LayoutsPredefinidosPage.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\ListPage.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Menu.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\Primeira.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\SeusLayoutsPage.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Views\View.xaml.g.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.AssemblyInfoInputs.cache
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.AssemblyInfo.cs
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.csproj.CoreCompileInputs.cache
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\XamlC.stamp
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.dll
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\ref\Projeto_CMS.dll
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.pdb
+D:\3 Ano\Projeto\Projeto\Projeto_CMS\Projeto_CMS\obj\Debug\netstandard2.0\Projeto_CMS.csproj.AssemblyReference.cache

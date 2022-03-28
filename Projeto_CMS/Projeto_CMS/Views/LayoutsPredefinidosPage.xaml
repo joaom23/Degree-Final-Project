@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto_CMS.LayoutsPredefinidosPage"
+             x:Name="LayoutsPreDefinidos"
+             Title="Layouts Pre-definidos" BackgroundColor="White">
+
+    <Grid VerticalOptions="CenterAndExpand" RowDefinitions="350, Auto">
+        <CarouselView IsBounceEnabled="True" ItemsSource="{Binding LayoutsPreDefinidosList}"
+                          Margin="0" IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={x:Reference LayoutsPreDefinidos}, Path= BindingContext.MostrarLayoutCarrossel}" CommandParameter="{Binding .}" />
+                        </StackLayout.GestureRecognizers>
+                        
+                        <Grid  HorizontalOptions="CenterAndExpand" Margin="100,10">
+
+                            <Image  Source="{Binding Imagem}"
+                                    Aspect="AspectFill"
+                                    HorizontalOptions="FillAndExpand"
+                                    WidthRequest="1000"
+                                    HeightRequest="1000">
+
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Mostrar" />
+                                </Image.GestureRecognizers>
+
+                            </Image>
+                        </Grid>
+                        <Grid WidthRequest="300" HeightRequest="200" Grid.Row="1"  HorizontalOptions="Center">
+                            <Label TextTransform="Uppercase" FontSize="20" TextColor="#ffa63a" Text="{Binding Label}" />
+                        </Grid>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView Grid.Row="6" Margin="0,0,0,20" VerticalOptions="EndAndExpand" x:Name="indicatorView"
+                       IndicatorColor="DarkBlue" SelectedIndicatorColor="#ffa63a" HorizontalOptions="Center"/>
+    </Grid>
+
+</ContentPage>

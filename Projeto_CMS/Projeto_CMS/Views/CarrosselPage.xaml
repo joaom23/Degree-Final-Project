@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Projeto_CMS.CarrosselPage"
+             xmlns:local="clr-namespace:Projeto_CMS.ViewModels"
+             Title="Exemplo Layout em Carrossel"
+             BackgroundColor="{Binding CorDeFundo}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <AbsoluteLayout>
+                    <Image HorizontalOptions="Center" Aspect="Fill" HeightRequest="150" WidthRequest="420" Opacity="0.8" Source="{Binding Banner}"></Image>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Titulo}" HorizontalTextAlignment="Start" FontSize="30"/>
+
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Descricao}" FontSize="20"/>
+
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Morada}" FontSize="20"/>
+
+                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding Horario}" FontSize="20"/>
+
+                    </Grid>
+
+                </AbsoluteLayout>
+                <Grid RowDefinitions="350, Auto">
+
+                    <CarouselView IsBounceEnabled="True" ItemsSource="{Binding ListaProdutos}"
+                          Margin="0" IndicatorView="indicatorView">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="80"/>
+                                        <RowDefinition Height="80"/>
+                                        <RowDefinition Height="80"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Image Grid.Row="1" Source="{Binding Imagem}" Aspect="AspectFill" HorizontalOptions="Center" />
+
+                                    <Label Grid.Row="2" FontSize="Large" Text="{Binding DescricaoProduto}" TextColor="{Binding CorTextoProdutos}" HorizontalOptions="Center" />
+
+                                    <Label Grid.Row="3" FontSize="Large" Text="{Binding Preco}" TextColor="{Binding CorTextoProdutos}" HorizontalOptions="Center"/>
+                                </Grid>
+
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <IndicatorView Grid.Row="1" Margin="0,0,0,20"  x:Name="indicatorView" VerticalOptions="End" IndicatorsShape="Circle"
+                       IndicatorColor="Gray" SelectedIndicatorColor="Black" HorizontalOptions="CenterAndExpand"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

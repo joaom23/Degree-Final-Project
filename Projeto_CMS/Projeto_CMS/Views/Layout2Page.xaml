@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Projeto_CMS.Layout2Page"
+             x:Name="Layout2"
+             xmlns:local="clr-namespace:Projeto_CMS.ViewModels"
+             Title="Seu Layout em Lista"
+             BackgroundColor="{Binding CorDeFundo}">
+
+    <ContentPage.Content>
+        <RefreshView Command="{Binding Source={x:Reference Layout2}, Path= BindingContext.RefreshCommand}" CommandParameter="{Binding Id}" IsRefreshing="{Binding IsRefreshing}" RefreshColor="#ffa63a">
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="600"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <AbsoluteLayout Grid.Row="0">
+                        <Image HorizontalOptions="Center" Aspect="Fill" HeightRequest="150" WidthRequest="420" Opacity="0.8" Source="{Binding Banner}"></Image>
+                        <StackLayout>
+
+                            <Label Text="{Binding Titulo}" TextColor="{Binding CorTitulo}" HorizontalOptions="Center" FontSize="40" Padding="50"></Label>
+                            <Label Text="{Binding Descricao}" TextColor="{Binding CorDescricao}" HorizontalOptions="Center" FontSize="20"></Label>
+                            <Label Text="{Binding Morada}" TextColor="{Binding CorMorada}" HorizontalOptions="Center"></Label>
+                            <Label Text="{Binding Horario}" TextColor="{Binding CorHorario}" HorizontalOptions="Center"></Label>
+                        </StackLayout>
+                    </AbsoluteLayout>
+                    <CollectionView Grid.Row="1" x:Name="col1" ItemsSource="{Binding ListaProdutos}" ItemsLayout="VerticalList">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10" Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="80"></RowDefinition>
+                                        <RowDefinition Height="80"></RowDefinition>
+                                        <RowDefinition Height="80"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding Imagem}" Aspect="AspectFill" Grid.RowSpan="2" Grid.ColumnSpan="2" HeightRequest="150" Grid.Column="0"></Image>
+                                    <Label BackgroundColor="White" TextColor="{Binding CorTextoProdutos}" Text="{Binding DescricaoProduto}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" ></Label>
+                                    <Label BackgroundColor="black" TextColor="White"  Text="{Binding Preco}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

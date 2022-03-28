@@ -1,0 +1,336 @@
+﻿@model Projeto_CMS_BackOffice.Models.Layout
+
+@{
+    ViewData["Title"] = "EditarLayoutNumero1";
+}
+
+<h1>Editar Layout</h1>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-@ViewBag.Type alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        @ViewBag.Message
+    </div>
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditarLayoutNumero1" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" value="@Model.Produtos.Count()" name="produtosExistentes" />
+            <input type="hidden" value="@Model.FotoBanner" name="FotoBannerAntiga" />
+
+            <div class="form-group">
+                <label class="control-label">Foto Banner</label>
+                <input name="FotoBanner" type="file" class="form-control" onchange="esconder(); showBanner(this)" />
+                <span asp-validation-for="FotoBanner" class="text-danger"></span>
+                <img src="http://127.0.0.1:2626/api/cliente/ImageGetLayout/@Model.FotoBanner" height="50" />
+            </div>
+
+            <input type="hidden" asp-for="Id" />
+            <input id="totalProdutos" type="hidden" value="@Model.Produtos.Count()" name="totalProdutos" />
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <input type="color" id="favcolor" class="colorpicker" name="corTitulo" asp-for="CorTitulo">
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <textarea asp-for="Descricao" class="form-control" rows="4" cols="50"></textarea>
+                <input type="color" id="favcolor" class="colorpicker" name="corDescricao" asp-for="CorDescricao">
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Morada" class="control-label"></label>
+                <input name="Morada" asp-for="Morada" class="form-control" required />
+                <input type="color" id="favcolor" class="colorpicker" name="corMorada" asp-for="CorMorada">
+                <span asp-validation-for="Morada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Hora Abertura</label>
+                <input asp-for="HoraAbertura" type="time" class="form-control" />
+                <input type="color" id="favcolor" class="colorpicker" name="corHorario" asp-for="CorHorario">
+                <span asp-validation-for="HoraAbertura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Hora Fecho</label>
+                <input asp-for="HoraFecho" type="time" class="form-control" />
+                <span asp-validation-for="HoraFecho" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group" style="position: absolute; right:-150%; top:0%;">
+                <label for="cars">Escolha o tipo de layout:</label>
+                <select required id="selectLayout" asp-for="NumeroLayout" name="NumeroLayout" onchange="showLayout()">
+                    <option value="" selected disabled hidden>--Tipo de Layout--</option>
+                    <option value="1">Layout Carrossel</option>
+                    <option value="2">Layout em Lista</option>
+                </select>
+                <br />
+                <img id="imagemLayout1" src="~/Exemplos/Layout1.jpg" height="700" style="border-radius:1%; box-shadow:2px 2px 4px grey;" />
+                <img id="imagemLayout2" src="~/Exemplos/Layout2.jpg" height="700" style="border-radius:1%; box-shadow:2px 2px 4px grey;" />
+            </div>
+
+            <div class="form-group" style="position: absolute; right:-200%; top:0%;">
+                <label>Cor de Fundo:</label>
+                <input type="color" id="favcolor" class="colorpicker" name="CorDeFundo" asp-for="CorDeFundo">
+            </div>
+
+            <div style="position:relative; top:-20px;">
+                <label>Cor do texto dos produtos: </label>
+                <input type="color" id="favcolor" name="corProdutos" asp-for="CorTextoProdutos">
+            </div>
+            <div id="AddLayout">
+                @{
+                    var i = 1;
+                    foreach (var m in Model.Produtos)
+                    {
+                        <div class="border-produtos">
+                            <input type="hidden" value="@m.Id" name="IdProduto@(i)" />
+                            <input type="hidden" value="@m.Foto" name="FotoN@(i)" />
+                            <div class="form-group">
+                                <label asp-for="@m.Foto" class="control-label"></label>
+                                <input id="foto@(i)" name="Foto@(i)" type="file" value="@m.Foto" class="form-control" onchange="esconder()" />
+                                <img src="http://127.0.0.1:2626/api/cliente/ImageGetLayout/@m.Foto" height="50" />
+                                <span asp-validation-for="@(m.Foto)" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Descrição do Produto</label>
+                                <input id="desc@(i)" asp-for="@m.DescricaoProduto" name="DescricaoProduto@(i)" class="form-control" onkeyup="esconder()" />
+                                <span asp-validation-for="@m.DescricaoProduto" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Preço</label>
+                                <input id="preco@(i)" asp-for="@m.Preco" type="number" name="Preco@(i)" class="form-control" onkeyup="esconder()" />
+                                <span asp-validation-for="@m.Preco" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                @if (Model.Produtos.Count() > 1)
+                                {
+                                    <a class="btn btn-danger" asp-action="RemoverProduto" asp-route-ProdutoId="@m.Id" asp-route-LayoutId="@Model.Id"> <i class="fa fa-trash-o fa-lg"></i></a>
+                                }
+                            </div>
+
+                        </div>
+                        i++;
+                    }
+                }
+            </div>
+            <br />
+            <input id="adicionar" type="button" class="btn btn-success" value="Adicionar Produto (+)" onclick="addProduct()" />
+            <br />
+            <br />
+
+            <div class="form-group">
+                <input type="submit" style="background-color: #ffa63a; border-color:white;" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-outline-info" asp-action="Index" asp-controller="Home">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type='text/javascript'>
+
+        function encodeImgtoBase64(element) {
+
+            var i = document.getElementById("AddLayout").childElementCount;
+            //alert(i);
+
+            var file = element.files[0];
+            if (/\.(jpe?g|png|gif|bmp)$/i.test(file.name)) {
+                var reader = new FileReader();
+
+                reader.onload = function () {
+                    //$("#preview" + i).val(reader.result); //fills the INPUT field with the content file
+                    $("[id^=preview" + i + "]").val(reader.result);
+                    //$("#fotoPreview" + i).attr("src", reader.result); //preview the selected image
+                    $("[id^=fotoPreview" + i + "]").attr("src", reader.result);
+                    //$("#fotoPreview1").toggle("slow");
+                    //$("#fotoPreview" + i).show();
+                    $("[id^=fotoPreview" + i + "]").show();
+
+
+                }
+                //alert("Foto adicionada");
+                reader.readAsDataURL(file); //read file and convert to Base64
+            } else {
+                alert("Invalid file. \nPlease insert an image file(JPG, PNG, GIF or BMP)")
+            }
+        }
+
+        function showLayout() {
+
+            var i = $('select[id=selectLayout] option').filter(':selected').val()
+
+            if (i == "1") {
+                $('#imagemLayout2').hide();
+                $('#imagemLayout1').show();
+            } else if (i == "2") {
+                $('#imagemLayout1').hide();
+                $('#imagemLayout2').show();
+            }
+
+
+        }
+
+        function addProduct() {
+
+            var number = document.getElementById("AddLayout").childElementCount + 1;
+            //var number = 2
+            var formLayout = document.getElementById("AddLayout");
+
+            var divNova = document.createElement("div");
+            divNova.id = "div" + number;
+            //divNova.className = "form-group";
+
+            var divFoto = document.createElement("div");
+            divFoto.classList.add("form-group");
+            var divDescricao = document.createElement("div");
+            divDescricao.classList.add("form-group");
+            var divPreco = document.createElement("div");
+            divPreco.classList.add("form-group");
+            var divApagar = document.createElement("div");
+            divApagar.classList.add("form-group");
+
+            //Div Foto
+            var labelFoto = document.createElement("label");
+            labelFoto.textContent = "Foto";
+            labelFoto.className = "control-label";
+            divFoto.appendChild(labelFoto);
+
+            var inputFoto = document.createElement("input");
+            inputFoto.type = "file";
+            inputFoto.name = "Foto" + number;
+            inputFoto.id = "foto" + number;
+            inputFoto.addEventListener("change", esconder);
+            inputFoto.addEventListener("change", function () { encodeImgtoBase64(this) });
+            inputFoto.className = "form-control";
+            divFoto.appendChild(inputFoto);
+
+            var inputFotoPreview = document.createElement("input");
+            inputFotoPreview.type = "hidden";
+            inputFotoPreview.id = "preview" + number
+            inputFotoPreview.className = "form-control";
+            divFoto.appendChild(inputFotoPreview);
+
+            var imagePreview = document.createElement("img");
+            imagePreview.id = "fotoPreview" + number;
+            imagePreview.className = "produto-foto";
+            divFoto.appendChild(imagePreview);
+
+            //Div Descricao
+            var labelDescricao = document.createElement("label");
+            labelDescricao.textContent = "Descrição do Produto";
+            labelDescricao.className = "control-label";
+            divDescricao.appendChild(labelDescricao);
+
+            var inputDescricao = document.createElement("input");
+            inputDescricao.type = "text";
+            inputDescricao.name = "DescricaoProduto" + number;
+            inputDescricao.id = "desc" + number;
+            inputDescricao.addEventListener("keyup", esconder);
+            inputDescricao.className = "form-control";
+            divDescricao.appendChild(inputDescricao);
+
+            //Div Preço
+            var labelPreco = document.createElement("label");
+            labelPreco.textContent = "Preço";
+            labelPreco.className = "control-label";
+            divPreco.appendChild(labelPreco);
+
+            var inputPreco = document.createElement("input");
+            inputPreco.type = "text";
+            inputPreco.name = "Preco" + number;
+            inputPreco.id = "preco" + number;
+            inputPreco.type = "number";
+            inputPreco.addEventListener("keyup", esconder);
+            inputPreco.className = "form-control";
+            divPreco.appendChild(inputPreco);
+
+            //Div Apagar
+            var botaoApagar = document.createElement("a");
+            botaoApagar.classList.add("btn");
+            botaoApagar.classList.add("btn-danger");
+            botaoApagar.textContent = "Remover Produto";
+            botaoApagar.id = number;
+            botaoApagar.style.color = "white";
+            botaoApagar.addEventListener("click", function () { removerDiv(this.id) });
+            botaoApagar.style.cursor = "pointer";
+            divApagar.appendChild(botaoApagar);
+
+            divNova.appendChild(divFoto);
+            divNova.appendChild(divDescricao);
+            divNova.appendChild(divPreco);
+            divNova.appendChild(divApagar);
+            divNova.appendChild(document.createElement("br"));
+            divNova.classList.add("border-produtos");
+
+
+            formLayout.appendChild(divNova);
+
+            $('#adicionar').hide();
+            $("[id^=" + (number - 1) + "]").hide();
+
+            $("#totalProdutos").val('');
+            $("#totalProdutos").val(number);
+
+            console.log($("#totalProdutos").val())
+        }
+
+        function esconder() {
+            var number = document.getElementById("AddLayout").childElementCount; //number vai representar o numero do novo produto a adicionar
+            //alert(number);
+            var foto = $.trim($('#foto' + number).val());
+            var desc = $.trim($('#desc' + number).val());
+            var preco = $.trim($('#preco' + number).val());
+
+            //var foto = document.getElementById("foto" + number).innerText;
+            //var desc = document.getElementById("desc" + number).innerText;
+            //var preco = document.getElementById("preco" + number).innerText;
+
+            if (desc != "" && preco != "" /*&& foto != ""*/) {
+                $('#adicionar').show();
+            } else {
+                $('#adicionar').hide();
+            }
+
+        }
+
+        function removerDiv(id) {
+            var div = document.getElementById("div" + id);
+            div.remove();
+
+            $("[id^=" + (id - 1) + "]").show();
+            $('#adicionar').show();
+        }
+
+        function teste() {
+            //alert('foto selecionada');
+        }
+
+        $(document).ready(function () {      
+
+            var i = $('select[id=selectLayout] option').filter(':selected').val()
+
+            if (i == "1") {
+                $('#imagemLayout1').show();
+                $('#imagemLayout2').hide();
+            } else if (i == "2") {
+                $('#imagemLayout2').show();
+                $('#imagemLayout1').hide();
+            }
+        });
+
+    </script>
+}

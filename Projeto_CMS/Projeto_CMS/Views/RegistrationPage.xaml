@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Projeto_CMS.ViewModels"
+             x:Class="Projeto_CMS.Views.RegistrationPage">
+    
+    <ContentPage.BindingContext>
+        <local:RegistrationViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="20">
+         
+            <Entry Text="{Binding Email, Mode=TwoWay}" Placeholder="Email" Keyboard="Email"/>
+
+            
+            <Entry Text="{Binding Username, Mode=TwoWay}" Placeholder="Username"/>
+
+          
+            <Entry Text="{Binding Password, Mode=TwoWay}" Placeholder="Password" IsPassword="True"/>
+
+            <Button Text="Registar" Command="{Binding RegistrationCommand}"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

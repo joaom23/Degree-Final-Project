@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto_CMS.View"
+             Title=""
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="{Binding Banner}" Aspect="AspectFill" WidthRequest="300"></Image>
+
+
+        <Label Grid.Row="2" Text="CMS APLICAÇÕES MÓVEIS" TextColor="#ffa63a" FontSize="30" HorizontalOptions="Center"/>
+    
+    </Grid>
+</ContentPage>
